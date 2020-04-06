@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "MovieStack_Font";
+  src: url('/assets/fonts/action-comics.ttf');
+  font-style: normal;
+}
+
+#top-bar {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  color: var(--color-text-light);
+  background-color: var(--color-back-dark);
+  padding: 5px 10px;
+}
+
+#menu_left {
+
+}
+
+#menu_center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-family: MovieStack_Font, serif;
+  font-size: larger;
+}
+
+#clap_cinema {
+  height: 50px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 375px){
+  #menu_center {
+    font-size: x-small;
+  }
+
+  #clap_cinema {
+    height: 40px;
+  }
+
+}

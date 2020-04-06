@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "MovieStack_Font";
+  src: url('/assets/fonts/action-comics.ttf');
+  font-style: normal;
+}
+
+#top-bar_menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#top-bar {
+  overflow: hidden;
+
+  color: var(--color-text-light);
+  background-color: var(--color-back-dark);
+  padding: 5px 10px;
+}
+
+#menu_left {
+
+}
+
+#menu_center {
+  font-family: MovieStack_Font, serif;
+  font-size: larger;
+}
+
+#menu {
+  display: flex;
+  flex-direction: column;
+}
+
+
+#clap_cinema {
+  height: 50px;
+}
+
+.color_menu {
+  color: var(--color-text-light);
+  background-color: var(--color-back-light);
+}
+
+.mat-list-item {
+  padding: 8px 10px;
+  display: flex;
+  width: auto;
+}
+
+.icons {
+  font-size: var(--size-icons-l);
+  height: var(--size-icons-l);
+  width: var(--size-icons-l);
+}
+
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-left {
+  text-align: left;
+}
+
+@media screen and (max-width: 375px){
+  #menu_center {
+    font-size: x-small;
+  }
+
+  #clap_cinema {
+    height: 40px;
+  }
+
+  .icons {
+    font-size: var(--size-icons-s);
+    height: var(--size-icons-s);
+    width: var(--size-icons-s);
+  }
+}

@@ -1,0 +1,32 @@
+<ng-container>
+  <div id="menu" class="menu_right">
+    <mat-sidenav-container class="open_menu">
+      <mat-sidenav class="color_menu" #sidenav position="end" mode="over">
+        <mat-icon class="icons" (click)="sidenav.toggle()">exit_to_app</mat-icon><br>
+
+              <div class="column">
+                <button class="align-left" mat-button [matMenuTriggerFor]="user">Connexion</button>
+                <button class="align-left" mat-button [matMenuTriggerFor]="movie">Film</button>
+              </div>
+
+              <mat-menu #user="matMenu">
+                <button *ngFor="let user of menuDetails.users" mat-menu-item>{{ user }}</button>
+              </mat-menu>
+
+              <mat-menu #movie="matMenu">
+                <button
+                  *ngFor="let movie of menuDetails.movies; let i = index"
+                  [routerLink]="movie.link"
+                  mat-menu-item
+                >
+                  {{ movie.label }}
+                </button>
+              </mat-menu>
+
+      </mat-sidenav>
+      <mat-sidenav-content class="close_menu">
+        <mat-icon class="icons" (click)="sidenav.toggle()">menu_open</mat-icon>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+</ng-container>
